@@ -1,0 +1,12 @@
+package io.github.cn04.triangular;
+
+/**
+ * Created by aedan on 11/5/16.
+ */
+
+import org.opencv.android.BaseLoaderCallback;
+
+public class VisionProcessor {
+
+    BaseLoaderCallback callback;
+}
