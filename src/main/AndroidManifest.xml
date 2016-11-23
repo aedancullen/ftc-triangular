@@ -7,7 +7,7 @@
         <activity
             android:name="io.github.aedancullen.triangular.TriangularRobotControllerActivity"
             android:configChanges="orientation|screenSize"
-            android:label="@string/app_name"
+            android:label="Triangular Controller"
             android:launchMode="singleTask" >
 
             <intent-filter>
