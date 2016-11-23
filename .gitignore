@@ -25,5 +25,5 @@ Thumbs.db
 build/
 
 # 
-mod/*
-!FtcRobotControllerActivity.patch
+mod/FtcRobotControllerActivity.java
+mod/FtcRobotControllerActivity.java.orig
