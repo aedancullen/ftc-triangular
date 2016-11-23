@@ -18,9 +18,9 @@ import static org.opencv.highgui.Highgui.imdecode;
 
 public class GameManager {
 
-    Properties gameProperties;
-    List<Mat> images;
-    List<String> names;
+    private Properties gameProperties;
+    private List<Mat> images = new ArrayList<>();
+    private List<String> names = new ArrayList<>();
 
 
     public GameManager(String gameName, Context appContext) throws IOException {
@@ -40,5 +40,15 @@ public class GameManager {
             images.add(mat);
         }
     }
+
+    public List<Mat> getImages() {
+        return images;
+    }
+
+    public List<String> getNames() {
+        return names;
+    }
+
+
 
 }

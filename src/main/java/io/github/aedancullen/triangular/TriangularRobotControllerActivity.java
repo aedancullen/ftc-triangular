@@ -1,4 +1,9 @@
 package io.github.aedancullen.triangular;
 
-public class TriangularRobotControllerActivity {
+import org.firstinspires.ftc.robotcontroller.internal.FtcRobotControllerActivity;
+
+public class TriangularRobotControllerActivity extends FtcRobotControllerActivity {
+
+
+
 }
