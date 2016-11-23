@@ -24,3 +24,6 @@ Thumbs.db
 .gradle
 build/
 
+# 
+mod/
+!mod/FtcRobotControllerActivity.patch
