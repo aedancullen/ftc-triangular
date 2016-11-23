@@ -54,7 +54,7 @@ public class TriangularRobotControllerActivity extends FtcRobotControllerActivit
         setContentView(R.layout.activity_ftc_controller);
 
         LinearLayout cameraViewParent = (LinearLayout) findViewById(R.id.cameraMonitorViewId);
-        mOpenCvCameraView = (CameraBridgeViewBase) new JavaCameraView(context, 0);
+        mOpenCvCameraView = new JavaCameraView(context, 0);
         cameraViewParent.addView(mOpenCvCameraView);
 
         mOpenCvCameraView.setVisibility(SurfaceView.VISIBLE);
