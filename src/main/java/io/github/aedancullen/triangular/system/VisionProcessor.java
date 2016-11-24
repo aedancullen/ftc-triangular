@@ -1,4 +1,4 @@
-package io.github.aedancullen.triangular;
+package io.github.aedancullen.triangular.system;
 
 import android.app.Activity;
 import android.content.Context;
@@ -23,9 +23,9 @@ public class VisionProcessor implements CameraBridgeViewBase.CvCameraViewListene
     private Activity activity;
 
     //
-    public static VisionProcessor newVisionProcessor;
+    private static VisionProcessor newVisionProcessor;
 
-    private static VisionProcessor beginOnUiThread(final Context context) {
+    public static VisionProcessor beginOnUiThread(final Context context) {
         Runnable starter = new Runnable() {
             public void run() {
                 VisionProcessor.newVisionProcessor =  new VisionProcessor(context);

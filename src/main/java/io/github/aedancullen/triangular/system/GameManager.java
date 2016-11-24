@@ -1,4 +1,4 @@
-package io.github.aedancullen.triangular;
+package io.github.aedancullen.triangular.system;
 
 import android.content.Context;
 
