@@ -19,4 +19,8 @@ public class TriangularDetectionDemo extends OpMode {
 
     public void loop() {}
 
+    public void stop() {
+        visionProcessor.stop();
+    }
+
 }

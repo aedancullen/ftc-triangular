@@ -10,6 +10,7 @@ import org.opencv.android.BaseLoaderCallback;
 import org.opencv.android.CameraBridgeViewBase;
 import org.opencv.android.JavaCameraView;
 import org.opencv.android.LoaderCallbackInterface;
+import org.opencv.android.NativeCameraView;
 import org.opencv.android.OpenCVLoader;
 import org.opencv.core.Mat;
 
@@ -29,10 +30,16 @@ public class VisionProcessor implements CameraBridgeViewBase.CvCameraViewListene
         Runnable starter = new Runnable() {
             public void run() {
                 VisionProcessor.newVisionProcessor =  new VisionProcessor(context);
+                synchronized (this) {
+                    this.notify();
+                }
             }
         };
-        ((Activity)context).runOnUiThread(starter);
-        return newVisionProcessor;
+        synchronized (starter) {
+            ((Activity)context).runOnUiThread(starter);
+            try {starter.wait();} catch(InterruptedException e) {}
+            return newVisionProcessor;
+        }
     }
     //
 
