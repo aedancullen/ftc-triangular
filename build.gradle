@@ -17,12 +17,14 @@ android {
     }
 }
 dependencies {
-    compile project(':openCVLibrary24131')
+    //compile project(':openCVLibrary24131')
+    compile (name:'openCVLibrary24131-release', ext:'aar')
     compile project(':FtcRobotController')
 }
 
 repositories {
     flatDir {
         dirs '../libs'
+        dirs './libs'
     }
 }
