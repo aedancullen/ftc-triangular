@@ -2,7 +2,6 @@ package io.github.aedancullen.triangular;
 
 import android.app.Activity;
 import android.content.Context;
-import android.os.Bundle;
 import android.util.Log;
 import android.view.SurfaceView;
 import android.widget.LinearLayout;
@@ -26,7 +25,7 @@ public class VisionProcessor implements CameraBridgeViewBase.CvCameraViewListene
     //
     public static VisionProcessor newVisionProcessor;
 
-    private static VisionProcessor start(final Context context) {
+    private static VisionProcessor beginOnUiThread(final Context context) {
         Runnable starter = new Runnable() {
             public void run() {
                 VisionProcessor.newVisionProcessor =  new VisionProcessor(context);
@@ -58,10 +57,6 @@ public class VisionProcessor implements CameraBridgeViewBase.CvCameraViewListene
         appContext = context;
         activity = (Activity)context;
         Log.i(TAG, "Instantiated new " + this.getClass());
-    }
-
-    public void onCreate(Bundle savedInstanceState) {
-        Log.i(TAG, "called onCreate");
 
         LinearLayout cameraViewParent = (LinearLayout) activity.findViewById(R.id.cameraMonitorViewId);
         mOpenCvCameraView = new JavaCameraView(activity, 0);
@@ -73,13 +68,7 @@ public class VisionProcessor implements CameraBridgeViewBase.CvCameraViewListene
         mOpenCvCameraView.setCvCameraViewListener(this);
     }
 
-    public void onPause()
-    {
-        if (mOpenCvCameraView != null)
-            mOpenCvCameraView.disableView();
-    }
-
-    public void onResume()
+    public void start()
     {
         if (!OpenCVLoader.initDebug()) {
             Log.d(TAG, "Internal OpenCV library not found. Using OpenCV Manager for initialization of 2.4.13");
@@ -90,7 +79,7 @@ public class VisionProcessor implements CameraBridgeViewBase.CvCameraViewListene
         }
     }
 
-    public void onDestroy() {
+    public void stop() {
         if (mOpenCvCameraView != null)
             mOpenCvCameraView.disableView();
     }
