@@ -13,8 +13,8 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Properties;
 
-import static org.opencv.highgui.Highgui.CV_LOAD_IMAGE_UNCHANGED;
-import static org.opencv.highgui.Highgui.imdecode;
+import static org.opencv.imgcodecs.Imgcodecs.CV_LOAD_IMAGE_UNCHANGED;
+import static org.opencv.imgcodecs.Imgcodecs.imdecode;
 
 public class GameManager {
 

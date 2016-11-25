@@ -14,7 +14,7 @@ public class TriangularDetectionDemo extends OpMode {
 
     public void init() {
         visionProcessor = VisionProcessor.beginOnUiThread(hardwareMap.appContext);
-        visionProcessor.start();
+        visionProcessor.start(0);
     }
 
     public void loop() {}

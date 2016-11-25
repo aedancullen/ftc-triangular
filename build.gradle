@@ -17,8 +17,8 @@ android {
     }
 }
 dependencies {
-    compile project(':openCVLibrary24131')
     compile project(':FtcRobotController')
+    compile project(':openCVLibrary310')
 }
 
 repositories {
