@@ -91,7 +91,7 @@ public class VisionProcessor implements CameraBridgeViewBase.CvCameraViewListene
 
         //cameraView.setVisibility(SurfaceView.VISIBLE);
         cameraView.setCameraIndex(cameraId);
-        cameraView.enableFpsMeter();
+        //cameraView.enableFpsMeter();
         cameraView.setCvCameraViewListener(this);
 
         if (!OpenCVLoader.initDebug()) {
