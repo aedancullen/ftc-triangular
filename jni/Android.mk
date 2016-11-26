@@ -13,7 +13,7 @@ else
 endif
 
 LOCAL_MODULE    := triangular-native
-LOCAL_SRC_FILES := triangular.cpp mosse.cpp
+LOCAL_SRC_FILES := mosse.cpp jni.c
 LOCAL_LDLIBS +=  -llog -ldl
 
 include $(BUILD_SHARED_LIBRARY)

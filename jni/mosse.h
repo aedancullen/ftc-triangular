@@ -48,7 +48,6 @@
 #ifndef TRIANGULAR_MOSSE_H
 #define TRIANGULAR_MOSSE_H
 
-#include <jni.h>
 #include <cmath>
 #include <opencv2/opencv.hpp>
 #include <opencv/cv.h>
