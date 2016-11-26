@@ -1,0 +1,33 @@
+{
+  "buildFiles": [
+    "/home/aedan/FTC/ftc_app-master/triangular/jni/Android.mk",
+    "/home/aedan/FTC/ftc_app-master/triangular/jni/Application.mk"
+  ],
+  "cleanCommands": [
+    "/home/aedan/Android/Sdk/ndk-bundle/ndk-build NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003d/home/aedan/FTC/ftc_app-master/triangular/jni/Android.mk NDK_APPLICATION_MK\u003d/home/aedan/FTC/ftc_app-master/triangular/jni/Application.mk APP_ABI\u003darmeabi NDK_ALL_ABIS\u003darmeabi NDEBUG\u003d0 APP_PLATFORM\u003dandroid-19 NDK_OUT\u003d/home/aedan/FTC/ftc_app-master/triangular/build/intermediates/ndkBuild/release/obj NDK_LIBS_OUT\u003d/home/aedan/FTC/ftc_app-master/triangular/build/intermediates/ndkBuild/release/lib clean"
+  ],
+  "libraries": {
+    "triangular-native-release-armeabi": {
+      "buildCommand": "/home/aedan/Android/Sdk/ndk-bundle/ndk-build NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003d/home/aedan/FTC/ftc_app-master/triangular/jni/Android.mk NDK_APPLICATION_MK\u003d/home/aedan/FTC/ftc_app-master/triangular/jni/Application.mk APP_ABI\u003darmeabi NDK_ALL_ABIS\u003darmeabi NDEBUG\u003d0 APP_PLATFORM\u003dandroid-19 NDK_OUT\u003d/home/aedan/FTC/ftc_app-master/triangular/build/intermediates/ndkBuild/release/obj NDK_LIBS_OUT\u003d/home/aedan/FTC/ftc_app-master/triangular/build/intermediates/ndkBuild/release/lib /home/aedan/FTC/ftc_app-master/triangular/build/intermediates/ndkBuild/release/obj/local/armeabi/libtriangular-native.so",
+      "toolchain": "toolchain-armeabi",
+      "abi": "armeabi",
+      "artifactName": "triangular-native",
+      "files": [
+        {
+          "src": "/home/aedan/FTC/ftc_app-master/triangular/jni/mosse.cpp",
+          "flags": "\"-gcc-toolchain\" \"/home/aedan/Android/Sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64\" \"-fpic\" \"-ffunction-sections\" \"-funwind-tables\" \"-fstack-protector-strong\" \"-Wno-invalid-command-line-argument\" \"-Wno-unused-command-line-argument\" \"-no-canonical-prefixes\" \"-fno-integrated-as\" \"-g\" \"-target\" \"armv5te-none-linux-androideabi\" \"-march\u003darmv5te\" \"-mtune\u003dxscale\" \"-msoft-float\" \"-fno-exceptions\" \"-fno-rtti\" \"-mthumb\" \"-Os\" \"-DNDEBUG\" \"-I../../OpenCV-android-sdk/sdk/native/jni/include/opencv\" \"-I../../OpenCV-android-sdk/sdk/native/jni/include\" \"-I/home/aedan/Android/Sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include\" \"-I/home/aedan/Android/Sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/libs/armeabi/include\" \"-I/home/aedan/Android/Sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include/backward\" \"-I/home/aedan/FTC/ftc_app-master/triangular/jni\" \"-DANDROID\" \"-fPIC\" \"-DANDROID\" \"-fsigned-char\" \"-Wa,--noexecstack\" \"-Wformat\" \"-Werror\u003dformat-security\" \"-frtti\" \"-fexceptions\" \"-isystem\" \"/home/aedan/Android/Sdk/ndk-bundle/platforms/android-19/arch-arm/usr/include\""
+        }
+      ],
+      "output": "/home/aedan/FTC/ftc_app-master/triangular/build/intermediates/ndkBuild/release/obj/local/armeabi/libtriangular-native.so"
+    }
+  },
+  "toolchains": {
+    "toolchain-armeabi": {
+      "cppCompilerExecutable": "/home/aedan/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++"
+    }
+  },
+  "cFileExtensions": [],
+  "cppFileExtensions": [
+    "cpp"
+  ]
+}
