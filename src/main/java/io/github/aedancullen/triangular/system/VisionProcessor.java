@@ -2,9 +2,7 @@ package io.github.aedancullen.triangular.system;
 
 import android.app.Activity;
 import android.content.Context;
-import android.graphics.PixelFormat;
 import android.util.Log;
-import android.view.SurfaceView;
 import android.view.WindowManager;
 import android.widget.LinearLayout;
 
@@ -15,9 +13,8 @@ import org.opencv.android.LoaderCallbackInterface;
 import org.opencv.android.OpenCVLoader;
 import org.opencv.core.Mat;
 
-import io.github.cn04.triangular.R;
-
 import static android.content.pm.ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE;
+
 
 public class VisionProcessor implements CameraBridgeViewBase.CvCameraViewListener2 {
 
@@ -56,6 +53,7 @@ public class VisionProcessor implements CameraBridgeViewBase.CvCameraViewListene
                 case LoaderCallbackInterface.SUCCESS:
                 {
                     Log.i(TAG, "OpenCV loaded successfully");
+                    System.loadLibrary("triangular-native");
                     cameraView.enableView();
                 } break;
                 default:
