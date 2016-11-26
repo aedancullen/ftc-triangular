@@ -3,31 +3,9 @@
     "/home/aedan/FTC/ftc_app-master/triangular/jni/Android.mk",
     "/home/aedan/FTC/ftc_app-master/triangular/jni/Application.mk"
   ],
-  "cleanCommands": [
-    "/home/aedan/Android/Sdk/ndk-bundle/ndk-build NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003d/home/aedan/FTC/ftc_app-master/triangular/jni/Android.mk NDK_APPLICATION_MK\u003d/home/aedan/FTC/ftc_app-master/triangular/jni/Application.mk APP_ABI\u003dmips NDK_ALL_ABIS\u003dmips NDEBUG\u003d1 APP_PLATFORM\u003dandroid-19 NDK_OUT\u003d/home/aedan/FTC/ftc_app-master/triangular/build/intermediates/ndkBuild/debug/obj NDK_LIBS_OUT\u003d/home/aedan/FTC/ftc_app-master/triangular/build/intermediates/ndkBuild/debug/lib clean"
-  ],
-  "libraries": {
-    "triangular-native-debug-mips": {
-      "buildCommand": "/home/aedan/Android/Sdk/ndk-bundle/ndk-build NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003d/home/aedan/FTC/ftc_app-master/triangular/jni/Android.mk NDK_APPLICATION_MK\u003d/home/aedan/FTC/ftc_app-master/triangular/jni/Application.mk APP_ABI\u003dmips NDK_ALL_ABIS\u003dmips NDEBUG\u003d1 APP_PLATFORM\u003dandroid-19 NDK_OUT\u003d/home/aedan/FTC/ftc_app-master/triangular/build/intermediates/ndkBuild/debug/obj NDK_LIBS_OUT\u003d/home/aedan/FTC/ftc_app-master/triangular/build/intermediates/ndkBuild/debug/lib /home/aedan/FTC/ftc_app-master/triangular/build/intermediates/ndkBuild/debug/obj/local/mips/libtriangular-native.so",
-      "toolchain": "toolchain-mips",
-      "abi": "mips",
-      "artifactName": "triangular-native",
-      "files": [
-        {
-          "src": "/home/aedan/FTC/ftc_app-master/triangular/jni/mosse.cpp",
-          "flags": "\"-gcc-toolchain\" \"/home/aedan/Android/Sdk/ndk-bundle/toolchains/mipsel-linux-android-4.9/prebuilt/linux-x86_64\" \"-target\" \"mipsel-none-linux-android\" \"-fpic\" \"-ffunction-sections\" \"-funwind-tables\" \"-fstack-protector-strong\" \"-fmessage-length\u003d0\" \"-Wno-invalid-command-line-argument\" \"-Wno-unused-command-line-argument\" \"-no-canonical-prefixes\" \"-g\" \"-mips32\" \"-fno-exceptions\" \"-fno-rtti\" \"-O2\" \"-DNDEBUG\" \"-I../../OpenCV-android-sdk/sdk/native/jni/include/opencv\" \"-I../../OpenCV-android-sdk/sdk/native/jni/include\" \"-I/home/aedan/Android/Sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include\" \"-I/home/aedan/Android/Sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/libs/mips/include\" \"-I/home/aedan/Android/Sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include/backward\" \"-I/home/aedan/FTC/ftc_app-master/triangular/jni\" \"-DANDROID\" \"-fPIC\" \"-DANDROID\" \"-fsigned-char\" \"-Wa,--noexecstack\" \"-Wformat\" \"-Werror\u003dformat-security\" \"-frtti\" \"-fexceptions\" \"-isystem\" \"/home/aedan/Android/Sdk/ndk-bundle/platforms/android-19/arch-mips/usr/include\""
-        }
-      ],
-      "output": "/home/aedan/FTC/ftc_app-master/triangular/build/intermediates/ndkBuild/debug/obj/local/mips/libtriangular-native.so"
-    }
-  },
-  "toolchains": {
-    "toolchain-mips": {
-      "cppCompilerExecutable": "/home/aedan/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++"
-    }
-  },
+  "cleanCommands": [],
+  "libraries": {},
+  "toolchains": {},
   "cFileExtensions": [],
-  "cppFileExtensions": [
-    "cpp"
-  ]
+  "cppFileExtensions": []
 }
