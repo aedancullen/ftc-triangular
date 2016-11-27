@@ -31,29 +31,28 @@ public class TriangularDetectionDemo extends OpMode {
         visionProcessor.stop();
     }**/
 
-private BaseLoaderCallback loaderCallback = new BaseLoaderCallback(hardwareMap.appContext) {
-    @Override
-    public void onManagerConnected(int status) {
-        switch (status) {
-            case LoaderCallbackInterface.SUCCESS:
-            {
-                System.loadLibrary("triangular-native");
-                nativePart = new NativePart();
-                int input = 8;
-                int result = nativePart.test(input);
-                telemetry.addData("JNI", "input " + input + ", output " + result);
-            } break;
-            default:
-            {
-                super.onManagerConnected(status);
-            } break;
-        }
-    }
-};
-
     NativePart nativePart;
 
     public void init() {
+        BaseLoaderCallback loaderCallback = new BaseLoaderCallback(hardwareMap.appContext) {
+            @Override
+            public void onManagerConnected(int status) {
+                switch (status) {
+                    case LoaderCallbackInterface.SUCCESS:
+                    {
+                        System.loadLibrary("triangular-native");
+                        nativePart = new NativePart();
+                        int input = 8;
+                        int result = nativePart.test(input);
+                        telemetry.addData("JNI", "input " + input + ", output " + result);
+                    } break;
+                    default:
+                    {
+                        super.onManagerConnected(status);
+                    } break;
+                }
+            }
+        };
         OpenCVLoader.initAsync(OpenCVLoader.OPENCV_VERSION_3_1_0, hardwareMap.appContext, loaderCallback);
     }
 
