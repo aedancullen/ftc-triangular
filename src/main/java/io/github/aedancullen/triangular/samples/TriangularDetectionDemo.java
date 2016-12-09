@@ -1,8 +1,5 @@
 package io.github.aedancullen.triangular.samples;
 
-import android.app.Activity;
-import android.util.Log;
-
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
@@ -10,8 +7,7 @@ import org.opencv.android.BaseLoaderCallback;
 import org.opencv.android.LoaderCallbackInterface;
 import org.opencv.android.OpenCVLoader;
 
-import io.github.aedancullen.triangular.system.NativePart;
-import io.github.aedancullen.triangular.system.VisionProcessor;
+import io.github.aedancullen.triangular.NativePart;
 
 
 @TeleOp(name="triangular: Detection Demo", group="Triangular")

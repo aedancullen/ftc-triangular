@@ -1,4 +1,4 @@
-package io.github.aedancullen.triangular.system;
+package io.github.aedancullen.triangular;
 
 
 public class NativePart {
